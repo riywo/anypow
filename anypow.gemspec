@@ -18,6 +18,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "rack-proxy"
+  spec.add_dependency "net-empty_port"
   spec.add_dependency "foreman"
 
   spec.add_development_dependency "bundler", "~> 1.3"
