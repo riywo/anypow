@@ -2,5 +2,7 @@ require "anypow/version"
 require "anypow/app"
 
 module Anypow
-  # Your code goes here...
+  def self.ruby_18?
+    defined?(RUBY_VERSION) and RUBY_VERSION =~ /^1\.8\.\d+/
+  end
 end
