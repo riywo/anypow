@@ -20,9 +20,9 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "rack-proxy"
   spec.add_dependency "net-empty_port"
-  spec.add_dependency "foreman"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
+  spec.add_development_dependency "rack-test"
 end
