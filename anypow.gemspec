@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Anypow::VERSION
   spec.authors       = ["Ryosuke IWANAGA"]
   spec.email         = ["riywo.jp@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Pow for any language}
+  spec.summary       = %q{Simpe rack proxy to use Pow in any language.}
+  spec.homepage      = "https://github.com/riywo/anypow"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

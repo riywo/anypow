@@ -1,6 +1,8 @@
 # Anypow
 
-TODO: Write a gem description
+[![Build Status](https://travis-ci.org/riywo/anypow.png?branch=master)](https://travis-ci.org/riywo/anypow)
+
+Simpe rack proxy to use Pow in any language.
 
 ## Installation
 
@@ -18,7 +20,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ cat config.ru
+    run Anypow::App.new("python -m SimpleHTTPServer $PORT")
 
 ## Contributing
 
