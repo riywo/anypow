@@ -21,6 +21,7 @@ Or install it yourself as:
 ## Usage
 
     $ cat config.ru
+    require "anypow"
     run Anypow::App.new("python -m SimpleHTTPServer $PORT")
 
 ## Contributing
