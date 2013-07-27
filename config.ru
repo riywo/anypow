@@ -1,4 +1,6 @@
 $:.unshift File.expand_path("../lib", __FILE__)
 require "anypow"
+extend Anypow
+run_pow "foreman start -p $PORT"
 
-run Anypow::App.new("python -m SimpleHTTPServer $PORT")
+run Proc.new {|env| [200, {"Content-Type" => "text/plain", "Content-Length" => "11"}, ["Hello Rack!"]]}
