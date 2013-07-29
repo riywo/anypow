@@ -22,7 +22,21 @@ Or install it yourself as:
 
     $ cat config.ru
     require "anypow"
-    run Anypow::App.new("python -m SimpleHTTPServer $PORT")
+    extend Anypow
+    run_pow "plackup -p $PORT"
+
+You can also use [foreman](https://github.com/ddollar/foreman) with pow!
+
+    $ cat config.ru
+    require "anypow"
+    extend Anypow
+    run_pow "foreman start -p $PORT"
+    require ::File.expand_path('../config/environment',  __FILE__)
+    run Rails.application
+    
+    $ cat Procfile
+    web: rackup -p $PORT
+    worker: rake worker:start
 
 ## Contributing
 
