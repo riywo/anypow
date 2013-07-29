@@ -15,6 +15,9 @@ module Anypow
   end
 
   def run_pow(command)
+    require 'rack'
+    use Rack::Chunked
+    use Rack::ContentLength
     run Anypow::App.new(command) if is_pow?
   end
 

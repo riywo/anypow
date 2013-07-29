@@ -19,6 +19,12 @@ class Anypow::App < Rack::Proxy
     super(opts)
   end
 
+  def rewrite_response(triplet)
+    status, headers, body = triplet
+    headers.delete('Transfer-Encoding')
+    triplet
+  end
+
   private
 
   def spawn_server(server_env, server_cmd)
